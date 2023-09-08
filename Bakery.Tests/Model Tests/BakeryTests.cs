@@ -62,5 +62,15 @@ namespace Bakery.Tests
         Assert.AreEqual(10, cost2);
         }
 
+    [TestMethod]
+        public void CalculateTotalCost_CalculatesCorrectTotalCost()
+        {
+        Bread bread = new Bread(5, 3);
+        Pastry pastry = new Pastry(2, 4);
+        int breadCost = bread.CalculateBreadCost(5);  
+        int pastryCost = pastry.CalculatePastryCost(6); 
+        int totalCost = Bakery.CalculateTotalCost(breadCost, pastryCost);
+        Assert.AreEqual(30, totalCost);
+        }
   }
 }

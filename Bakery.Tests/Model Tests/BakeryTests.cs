@@ -13,7 +13,7 @@ namespace Bakery.Tests
       {
         int pricePerLoaf = 5;
         int loafsPerDeal = 3;
-        Bread bread = new Bread(pricePerLoaf, LoafsPerDeal);
+        Bread bread = new Bread(pricePerLoaf, loafsPerDeal);
         Assert.AreEqual(typeof(Bread) , bread.GetType());
     }
 
@@ -41,9 +41,9 @@ namespace Bakery.Tests
       {
         int pricePerLoaf = 5;
         int loafsPerDeal = 3;
-        Bread bread = new Bread(pricePerLoaf, LoafsPerDeal);
+        Bread bread = new Bread(pricePerLoaf, loafsPerDeal);
         Assert.AreEqual(pricePerLoaf, bread.PricePerLoaf);
-        Assert.AreEqual(LoafsPerDeal, bread.LoafsPerDeal);
+        Assert.AreEqual(loafsPerDeal, bread.LoafsPerDeal);
         }
   }
 }

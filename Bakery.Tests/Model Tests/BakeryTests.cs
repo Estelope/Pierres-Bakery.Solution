@@ -11,7 +11,9 @@ namespace Bakery.Tests
     [TestMethod]
       public void BreadConstructor_CreatesInstanceOfBread_Bread()
       {
-        Bread bread = new Bread();
+        int pricePerLoaf = 5;
+        int loafsPerDeal = 3;
+        Bread bread = new Bread(pricePerLoaf, LoafsPerDeal);
         Assert.AreEqual(typeof(Bread) , bread.GetType());
     }
 
@@ -32,6 +34,16 @@ namespace Bakery.Tests
         Pastry pastry = new Pastry(pricePerPastry, pastriesPerDeal);
         Assert.AreEqual(pricePerPastry, pastry.PricePerPastry);
         Assert.AreEqual(pastriesPerDeal, pastry.PastriesPerDeal);
+        }
+
+    [TestMethod]
+      public void BreadConstructor_AcceptsInputValues()
+      {
+        int pricePerLoaf = 5;
+        int loafsPerDeal = 3;
+        Bread bread = new Bread(pricePerLoaf, LoafsPerDeal);
+        Assert.AreEqual(pricePerLoaf, bread.PricePerLoaf);
+        Assert.AreEqual(LoafsPerDeal, bread.LoafsPerDeal);
         }
   }
 }

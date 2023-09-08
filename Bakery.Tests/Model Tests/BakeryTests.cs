@@ -10,16 +10,14 @@ namespace Bakery.Tests
 
     [TestMethod]
       public void BreadConstructor_CreatesInstanceOfBread_Bread()
-      {
-        
+      {     
         Bread bread = new Bread(5,3);
         Assert.AreEqual(typeof(Bread) , bread.GetType());
     }
 
     [TestMethod]
       public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
-      {        
-        
+      {               
         Pastry pastry = new Pastry(5,3);     
         Assert.AreEqual(typeof(Pastry) , pastry.GetType());
     }
@@ -43,6 +41,16 @@ namespace Bakery.Tests
         Assert.AreEqual(pricePerLoaf, bread.PricePerLoaf);
         Assert.AreEqual(loafsPerDeal, bread.LoafsPerDeal);
         }
-        
+
+    [TestMethod]
+      public void BreadCalculateCost_CalculatesCorrectCost()
+      {   
+        Bread bread = new Bread(5, 3); 
+        int cost1 = bread.CalculateCost(3); 
+        int cost2 = bread.CalculateCost(5); 
+        Assert.AreEqual(10, cost1);
+        Assert.AreEqual(25, cost2);
+      }
+
   }
 }

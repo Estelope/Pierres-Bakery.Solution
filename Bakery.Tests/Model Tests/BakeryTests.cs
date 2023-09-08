@@ -11,18 +11,16 @@ namespace Bakery.Tests
     [TestMethod]
       public void BreadConstructor_CreatesInstanceOfBread_Bread()
       {
-        int pricePerLoaf = 5;
-        int loafsPerDeal = 3;
-        Bread bread = new Bread(pricePerLoaf, loafsPerDeal);
+        
+        Bread bread = new Bread(5,3);
         Assert.AreEqual(typeof(Bread) , bread.GetType());
     }
 
     [TestMethod]
       public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
       {        
-        int pricePerPastry = 2;
-        int pastriesPerDeal = 4;
-        Pastry pastry = new Pastry(pricePerPastry, pastriesPerDeal);     
+        
+        Pastry pastry = new Pastry(5,3);     
         Assert.AreEqual(typeof(Pastry) , pastry.GetType());
     }
 

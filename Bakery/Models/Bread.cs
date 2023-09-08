@@ -24,9 +24,12 @@ namespace Bakery
             PricePerLoaf = pricePerLoaf;
             LoafsPerDeal = loafsPerDeal;
         }
-        public int CalculateCost(int quantity)
+        public int CalculateBreadCost(int quantity)
         {
-          
+            int setsOfThree = quantity / LoafsPerDeal;
+            int remainingLoaves = quantity % LoafsPerDeal;
+            int totalCost = (setsOfThree * 2 + remainingLoaves) * PricePerLoaf;
+            return totalCost;
         }
   }
 }

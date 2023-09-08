@@ -24,5 +24,8 @@ namespace Bakery
             PricePerPastry = pricePerPastry;
             PastriesPerDeal = pastriesPerDeal;
         }
+         public int CalculatePastryCost(int quantity)
+        {
+        }
     }
 }

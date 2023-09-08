@@ -46,11 +46,21 @@ namespace Bakery.Tests
       public void BreadCalculateCost_CalculatesCorrectCost()
       {   
         Bread bread = new Bread(5, 3); 
-        int cost1 = bread.CalculateCost(3); 
-        int cost2 = bread.CalculateCost(5); 
+        int cost1 = bread.CalculateBreadCost(3); 
+        int cost2 = bread.CalculateBreadCost(5); 
         Assert.AreEqual(10, cost1);
-        Assert.AreEqual(25, cost2);
+        Assert.AreEqual(20, cost2);
       }
+
+    [TestMethod]
+      public void PastryCalculateCost_CalculatesCorrectCost()
+        {
+        Pastry pastry = new Pastry(2, 4); 
+        int cost1 = pastry.CalculateCost(3); 
+        int cost2 = pastry.CalculateCost(6);
+        Assert.AreEqual(6, cost1);
+        Assert.AreEqual(12, cost2);
+        }
 
   }
 }

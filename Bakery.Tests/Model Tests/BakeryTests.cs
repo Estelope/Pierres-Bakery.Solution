@@ -19,7 +19,7 @@ namespace Bakery.Tests
     public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
     {
         Pastry pastry = new Pastry();
-       
+        Assert.AreEqual(typeof(Pastry) , pastry.GetType());
     }
   }
 }

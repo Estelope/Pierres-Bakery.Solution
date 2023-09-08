@@ -69,7 +69,7 @@ namespace Bakery.Tests
         Pastry pastry = new Pastry(2, 4);
         int breadCost = bread.CalculateBreadCost(5);  
         int pastryCost = pastry.CalculatePastryCost(6); 
-        int totalCost = Bakery.CalculateTotalCost(breadCost, pastryCost);
+        int totalCost = BakeryUtility.CalculateTotalCost(breadCost, pastryCost);
         Assert.AreEqual(30, totalCost);
         }
   }

@@ -6,7 +6,7 @@ namespace Bakery
     {
         public static int CalculateTotalCost(int breadCost, int pastryCost)
         {
-            
+          return breadCost + pastryCost;  
         }
     }
 }

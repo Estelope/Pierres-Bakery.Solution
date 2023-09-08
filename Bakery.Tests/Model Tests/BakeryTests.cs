@@ -56,10 +56,10 @@ namespace Bakery.Tests
       public void PastryCalculateCost_CalculatesCorrectCost()
         {
         Pastry pastry = new Pastry(2, 4); 
-        int cost1 = pastry.CalculateCost(3); 
-        int cost2 = pastry.CalculateCost(6);
+        int cost1 = pastry.CalculatePastryCost(3); 
+        int cost2 = pastry.CalculatePastryCost(6);
         Assert.AreEqual(6, cost1);
-        Assert.AreEqual(12, cost2);
+        Assert.AreEqual(10, cost2);
         }
 
   }

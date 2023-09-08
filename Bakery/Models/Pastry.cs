@@ -26,6 +26,8 @@ namespace Bakery
         }
          public int CalculatePastryCost(int quantity)
         {
+          int totalCost = (quantity / PastriesPerDeal * 3 + quantity % PastriesPerDeal) * PricePerPastry;
+            return totalCost;
         }
     }
 }

@@ -27,7 +27,7 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
-      public void PastryConstructor_AcceptsInputValues()
+      public void PastryConstructor_GetterAndSetterWork()
       {
         int pricePerPastry = 2;
         int pastriesPerDeal = 4;
@@ -37,7 +37,7 @@ namespace Bakery.Tests
         }
 
     [TestMethod]
-      public void BreadConstructor_AcceptsInputValues()
+      public void BreadConstructor_GetterAndSetterWork()
       {
         int pricePerLoaf = 5;
         int loafsPerDeal = 3;
@@ -45,5 +45,6 @@ namespace Bakery.Tests
         Assert.AreEqual(pricePerLoaf, bread.PricePerLoaf);
         Assert.AreEqual(loafsPerDeal, bread.LoafsPerDeal);
         }
+        
   }
 }

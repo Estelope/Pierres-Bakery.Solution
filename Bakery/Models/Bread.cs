@@ -5,19 +5,8 @@ namespace Bakery
 {
   public class Bread
   {
-        private int _PricePerLoaf = 5;
-        public int PricePerLoaf
-        {
-            get { return _PricePerLoaf; }
-            set { _PricePerLoaf = value; }
-        }
-
-        private int _LoafsPerDeal = 3;
-        public int LoafsPerDeal
-        {
-            get { return _LoafsPerDeal; }
-            set { _LoafsPerDeal = value; }
-        }
+         public int PricePerLoaf { get; set; } = 5;
+        public int LoafsPerDeal { get; set; } = 3;
 
         public Bread(int pricePerLoaf, int loafsPerDeal)
         {
